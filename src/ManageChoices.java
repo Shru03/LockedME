@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class ManageChoices {
+	
+//Handles Main menu operations
   public void mainMenuOptions() {
 		boolean running = true;
 		Scanner sc = new Scanner(System.in);
@@ -27,13 +29,17 @@ public class ManageChoices {
 			default:
 				System.out.println("Please enter a valid option");
 			}
-		} catch (Exception e) {
+		} catch (Exception e) {			
 			e.printStackTrace();
 			mainMenuOptions();
+		} finally {
+			System.out.println("\nTry more operations from the menu. \n");
+			Menu.displayMainMenu();
 		}
 	}while (running ==true);
   }
   
+  //handles file menu operations
   public void fileMenuOptions() {
 	  boolean running = true;
 	  Scanner sc = new Scanner(System.in); 
@@ -70,7 +76,10 @@ public class ManageChoices {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}  finally {
+			System.out.println("\nTry more operations from the menu. \n");
+			Menu.displayFileMenu();
+		}
 	} while (running == true);
   }
   

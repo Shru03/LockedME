@@ -15,27 +15,28 @@ Scanner sc = new Scanner(System.in);
 		System.out.print("Enter filename to be searched : ");
 		fname = sc.next();
 		
-		SearchingFile sf = new SearchingFile();
-		sf.searchList();
-		sf.search(fname);
+		SearchingFile a = new SearchingFile();
+		a.getList();
+		a.find(fname);
 	}
 	
-	
-	public void searchList() {				
-      String[] children = dir.list();
+	//Gets the filenames from the directory and adds them to an array list for searching the files.
+	public void getList() {				
+      String[] str = dir.list();
       
-      if (children == null) {
+      if (str == null) {
          System.out.println( "Directory Empty.");
       } else { 
-         for (int i = 0; i< children.length; i++) {
-            String filename = children[i];
+         for (int i = 0; i< str.length; i++) {
+            String filename = str[i];
             listfname.add(filename);
          }
       }  
       
 	}
 	
-	public void search(String fname) {
+	//Checking if the file is present in the array list
+	public void find(String fname) {
 		boolean present = listfname.contains(fname); 
 		
 		if (present) 

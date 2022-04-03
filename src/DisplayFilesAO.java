@@ -3,12 +3,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+//displays the file's contents in ascending order.
 public class DisplayFilesAO {
 		
 	
 	public void ascendOrder() {	
 	File fileDir = new File("C:\\Users\\siddh\\eclipse-workspace\\LockedME\\LockFiles");
 	
+	//Arrange contents of the directory in ascending order
 	if(fileDir.isDirectory()){
 		List<String> listFile = Arrays.asList(fileDir.list());
 		Collections.sort(listFile);
@@ -16,6 +18,7 @@ public class DisplayFilesAO {
 		for(String s:listFile){
 			System.out.println(s);
 		}
+		System.out.println("\n");
 	}
 	else{
 		System.out.println(fileDir.getAbsolutePath() + " is not a directory");

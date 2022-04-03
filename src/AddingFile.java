@@ -9,11 +9,11 @@ public class AddingFile {
 	String fname;
 	
 	public void addFile() {
-		//Accepting name of the file from the user 
+		//Accepting the user's file name as input
 		System.out.print("Enter file name : ");
 		fname = sc.next();
 		
-		//Calling CreateFile function to create the file 
+		//creating file by calling createFile method
 		AddingFile a = new AddingFile();
 		a.createFile(fname);
 	}

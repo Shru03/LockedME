@@ -4,7 +4,7 @@ public class LockedMeMain {
 		
 		//Prints welcome screen
 		System.out.println("-------------------------");
-		System.out.println("LockedMe.com");
+		System.out.println("|\tLockedMe.com\t|");
 		System.out.println("-------------------------");
 		System.out.println("Developed By - Shruti Sharma @Company Lockers Pvt. Ltd.\n");
 		
