@@ -1,22 +1,21 @@
 
 public class Menu {
-	public void displayMainMenu() {
-		String mainMenu = "------MAIN MENU ------"
-				+ "1) Display files inside \"Locked Files\" folder\n" 
-				+ "2) Go for File operations: Searching, Adding or Deleting\n"
-				+ "3) Exit program\n"
-		        + "\n\nSelect an option from above and press Enter.\n";
+	public static void displayMainMenu() {
+		String mainMenu = "------MAIN MENU ------\n"
+				+ "1. Display files inside \"LockFiles\" folder\n" 
+				+ "2. Go for File operations: Searching, Adding or Deleting\n"
+				+ "3. Exit program\n"
+		        + "\nSelect an option from above and press Enter.\n";
 		System.out.println(mainMenu);
 		}
-	public void displayFileMenu() {
+	public static void displayFileMenu() {
 		String fileMenu = "------ FILE OPERATIONS MENU ------"
-				+ "1) Add a file to \"Locked Files\" folder\n" 
-				+ "2) Delete a file from \"Locked Files\" folder\n"
-				+ "3) Search for a file from \"Locked Files\" folder\n" 
-				+ "4) Show Previous Menu\n" 
-				+ "5) Exit program\n"
-		        + "\n\nSelect an option from above and press Enter.\n\n";
+				+ "1. Add a file to \"LockFiles\" folder\n" 
+				+ "2. Delete a file from \"LockFiles\" folder\n"
+				+ "3. Search for a file from \"LockFiles\" folder\n" 
+				+ "4. Show Previous Menu\n" 
+				+ "5. Exit program\n"
+		        + "\nSelect an option from above and press Enter.";
 		System.out.println(fileMenu);
-}
-
+        }
 }
