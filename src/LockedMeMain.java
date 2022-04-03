@@ -2,7 +2,7 @@
 public class LockedMeMain {
 	public static void main(String[] args) {
 		
-		//Welcome screen
+		//Prints welcome screen
 		System.out.println("-------------------------");
 		System.out.println("LockedMe.com");
 		System.out.println("-------------------------");
@@ -12,13 +12,13 @@ public class LockedMeMain {
 		        + " • Get the List of all the files in the \"LockFiles\" folder\n" 
 				+ " • For searching, adding, or deleting files in the \"LockFiles\" folder.\n" ;
 		
-		//Showing Features of Program
+		//Prints features of program
 		System.out.println(features);
 		
-		//Showing Main menu
+		//Prints Main menu
 		Menu.displayMainMenu();
 		
-		//Handle Main menu options
+		//Handles Main menu options by calling mainMenuOptions method of class ManageChoices.
 		ManageChoices manageChoices = new ManageChoices();
 		manageChoices.mainMenuOptions();
 	}

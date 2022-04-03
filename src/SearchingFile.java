@@ -9,6 +9,7 @@ Scanner sc = new Scanner(System.in);
 	ArrayList<String> listfname = new ArrayList<>();
 	String fname;
 	
+	//Takes the name of the file to be searched and calls the method that will do the searching.
 	public void searchFile() {
 
 		System.out.print("Enter filename to be searched : ");
@@ -18,6 +19,7 @@ Scanner sc = new Scanner(System.in);
 		sf.searchList();
 		sf.search(fname);
 	}
+	
 	
 	public void searchList() {				
       String[] children = dir.list();
@@ -37,9 +39,9 @@ Scanner sc = new Scanner(System.in);
 		boolean present = listfname.contains(fname); 
 		
 		if (present) 
-            System.out.println("File is Present in the directory"); 
+            System.out.println("File is Found at location : " + dir); 
         else
-        	System.out.println("File is not present in the directory."); 
+        	System.out.println("File Not Found in the directory."); 
 	}
 
 }
