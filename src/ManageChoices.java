@@ -50,11 +50,13 @@ public class ManageChoices {
 				dl.delFile();
 				break;
 			case 3:
-				SearchingFile sf = new SearchingFile();
-				sf.searchFile();
+			    SearchingFile sf = new SearchingFile();
+			    sf.searchFile();
 				break;
 			case 4:
 				Menu.displayMainMenu();
+				ManageChoices manageChoices = new ManageChoices();
+				manageChoices.mainMenuOptions();
 				break;
 			case 5:
 				System.out.println("Program exited successfully");

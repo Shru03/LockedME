@@ -1,5 +1,7 @@
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 public class AddingFile {
@@ -16,14 +18,14 @@ public class AddingFile {
 		a.createFile(fname);
 	}
 
-	public void createFile(String fname2) {
+	public void createFile(String fname) {
 		File dir = new File ("C:\\Users\\siddh\\eclipse-workspace\\LockedME\\LockFiles");
 		File file = new File(dir, fname);
-		
+		OutputStream out = null;
 		try {
-			if(file.createNewFile()) {
-				System.out.println("Created a File: " + file.getName());
-			}
+			out = new FileOutputStream(file);
+			out.close();
+			System.out.println("Created a File: " + file.getName());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
